@@ -151,8 +151,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Email settings
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_SSL = True
+EMAIL_HOST = 'sd-1883055-l.dattaweb.com'
 EMAIL_HOST_USER = get_secret('EMAIL')
 EMAIL_HOST_PASSWORD = get_secret('PASS_EMAIL')
-EMAIL_PORT = 587
+EMAIL_PORT = '465'
