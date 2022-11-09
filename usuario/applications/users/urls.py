@@ -14,4 +14,19 @@ urlpatterns = [
         views.Login.as_view(),
         name='login',
     ),
+    path(
+        'logout/',
+        views.LogoutView.as_view(),
+        name='logout',
+    ),
+    path(
+        'update/',
+        views.LogoutView.as_view(),
+        name='update',
+    ),
+    path(
+        'verification/',
+        views.CodeVerificationView.as_view(),
+        name='verification',
+    ),
 ]

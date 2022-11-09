@@ -7,12 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Panel de Usuario</h1>
-    <h3>Bienvenidos:{{users}}</h3>
-    
-    <ul>
-        <li><a href="{% url 'user_app:logout %}">Cerrar Sesión</a></li>
-        <li><a href="{% url 'user_app:update %}">Actualizar Datos</a></li>
-    </ul>
+    <h1>Verificación de email</h1>
+    <h3>Ingrese código de verificación:</h3>
+    <form method="post">{% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Confirmar</button>
+    </form>
 </body>
 </html>
