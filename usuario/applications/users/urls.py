@@ -21,7 +21,7 @@ urlpatterns = [
     ),
     path(
         'update/',
-        views.LogoutView.as_view(),
+        views.UpdatePasswordView.as_view(),
         name='update',
     ),
     path(

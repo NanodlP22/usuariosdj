@@ -40,7 +40,7 @@ class UserRegisterView(FormView):
         #enviar el codigo generado al email del usuario
         asunto = 'Confirmación de email'
         mensaje = 'Código de verificación: ' + codigo
-        email_remitente = 'marcelodelape@gmail.com'
+        email_remitente = 'batman@gmail.com'
         try:
             send_mail(asunto, mensaje, email_remitente, [form.cleaned_data['email'], ])
             print ("######################################")
@@ -73,7 +73,7 @@ class LogoutView(View):
         logout(request)
         return HttpResponseRedirect(
             reverse(
-                'user_app:login'
+                'users_app:login'
             )
         )
         
@@ -88,7 +88,7 @@ class UpdatePasswordView(LoginRequiredMixin, FormView):
         usuario = self.request.user
         user = authenticate(
             username = usuario.username,
-            password = form.cleaned_data['passwoed1']
+            password = form.cleaned_data['password1']
         )
         if user:
             new_password = form.cleaned_data['password2']
